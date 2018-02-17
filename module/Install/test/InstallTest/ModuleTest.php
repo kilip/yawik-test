@@ -54,7 +54,6 @@ class ModuleTest extends \PHPUnit_Framework_TestCase
      */
     public function testImplementsInterfaces()
     {
-        $this->assertInstanceOf('\Zend\ModuleManager\Feature\AutoloaderProviderInterface', $this->target, 'Module class does not implement AutoloaderProviderInterface');
         $this->assertInstanceOf('\Zend\ModuleManager\Feature\ConfigProviderInterface', $this->target, 'Module class does not implement ConfigProviderInterface');
         $this->assertInstanceOf('\Zend\ModuleManager\Feature\BootstrapListenerInterface', $this->target, 'Module class does not implement BootstrapListenerInterface');
     }
@@ -64,26 +63,6 @@ class ModuleTest extends \PHPUnit_Framework_TestCase
         $config = include $this->moduleDir . '/config/module.config.php';
 
         $this->assertEquals($config, $this->target->getConfig());
-    }
-
-    public function testProvidesCorrectAutoloaderConfigArray()
-    {
-        $config = array(
-            'Zend\Loader\ClassMapAutoloader' => array(
-                $this->moduleDir . '/src/autoload_classmap.php',
-                array(
-                    'Auth\Entity\Filter\CredentialFilter' => $this->moduleDir . '/../Auth/src/Auth/Entity/Filter/CredentialFilter.php',
-                ),
-            ),
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    $this->moduleNamespace => $this->moduleDir . '/src',
-                    $this->moduleNamespace . 'Test' => $this->moduleDir . '/test/' . $this->moduleNamespace . 'Test',
-                ),
-            ),
-        );
-
-        $this->assertEquals($config, $this->target->getAutoloaderConfig());
     }
 
     /**

@@ -79,6 +79,7 @@ class Bootstrap
 
     protected static function initAutoloader()
     {
+        return;
         $vendorPath = static::findParentPath('vendor');
 
         if (is_readable($vendorPath . '/autoload.php')) {
