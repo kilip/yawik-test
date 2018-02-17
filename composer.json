@@ -28,6 +28,11 @@
         "zf2", "jobboard"
     ],
     "homepage": "http://yawik.org/",
+    "extra": {
+        "branch-alias": {
+            "dev-composer-integration": "1.0-dev"
+        }
+    },
     "require": {
         "php": ">=5.6",
         "ext-mongo": "*",
