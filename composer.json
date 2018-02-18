@@ -101,7 +101,8 @@
             "Jobs\\": "module/Jobs/src",
             "Organizations\\": "module/Organizations/src",
             "Pdf\\": "module/Pdf/src",
-            "Settings\\": "module/Settings/src"
+            "Settings\\": "module/Settings/src",
+            "Yawik\\Behat\\": "module/Behat/src"
         }
     },
     "autoload-dev": {
