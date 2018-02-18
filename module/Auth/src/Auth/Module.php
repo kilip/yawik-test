@@ -36,38 +36,7 @@ class Module
      */
     public function getConfig()
     {
-        return ModuleConfigLoader::load(__DIR__ . '/config');
-    }
-
-    /**
-     * Loads module specific autoloader configuration.
-     *
-     * @return array
-     */
-    public function getAutoloaderConfig()
-    {
-        return array(
-            'Zend\Loader\ClassMapAutoloader' => array(
-                // This is an hack due to bad design of Hybridauth
-                // This ensures the class from "addtional-providers" is loaded.
-                array(
-                    'Hybrid_Providers_XING'
-                    => __DIR__ . '/../../vendor/hybridauth/hybridauth/additional-providers/hybridauth-xing/Providers/XING.php',
-                ),
-                array(
-                    'Hybrid_Providers_Github'
-                    => __DIR__ . '/../../vendor/hybridauth/hybridauth/additional-providers/hybridauth-github/Providers/GitHub.php',
-                ),
-            ),
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                    'AuthTest' => __DIR__ . '/test/AuthTest',
-                    'Acl' => __DIR__ . '/src/Acl',
-                    'AclTest' => __DIR__ . '/test/AclTest',
-                ),
-            ),
-        );
+        return ModuleConfigLoader::load(__DIR__ . '/../../config');
     }
 
     public function onBootstrap(MvcEvent $e)

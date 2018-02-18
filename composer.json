@@ -92,7 +92,8 @@
     "autoload": {
         "psr-4": {
             "Applications\\": "module/Applications/src",
-            "Auth\\": "module/Auth/src",
+            "Auth\\": "module/Auth/src/Auth",
+            "Acl\\": "module/Auth/src/Acl",
             "Yawik\\Behat\\": "module/Behat/src",
             "Core\\": "module/Core/src",
             "Cv\\": "module/Cv/src",
