@@ -1,5 +1,5 @@
 {
-    "name": "yawik/test",
+    "name": "kilip/yawik",
     "type": "project",
     "description": "Web based applicant tracking system for managing jobs and applications",
     "authors": [
@@ -30,7 +30,7 @@
     "homepage": "http://yawik.org/",
     "extra": {
         "branch-alias": {
-            "dev-composer-integration": "1.0-dev"
+            "dev-master": "1.0-dev"
         }
     },
     "require": {
