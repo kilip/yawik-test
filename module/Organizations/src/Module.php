@@ -25,27 +25,7 @@ class Module implements \Zend\ModuleManager\Feature\BootstrapListenerInterface
      */
     public function getConfig()
     {
-         return ModuleConfigLoader::load(__DIR__ . '/config');
-    }
-    
-    /**
-     * Loads module specific autoloader configuration.
-     *
-     * @return array
-     */
-    public function getAutoloaderConfig()
-    {
-        return array(
-            'Zend\Loader\ClassMapAutoloader' => [
-                __DIR__ . '/src/autoload_classmap.php'
-            ],
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                    'OrganizationsTest' => __DIR__ . '/test/' . 'OrganizationsTest'
-                ),
-            ),
-        );
+         return ModuleConfigLoader::load(__DIR__ . '/../config');
     }
 
     public function onBootstrap(EventInterface $e)

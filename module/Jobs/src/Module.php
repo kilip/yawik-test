@@ -38,27 +38,7 @@ class Module implements ConsoleUsageProviderInterface
      */
     public function getConfig()
     {
-        return ModuleConfigLoader::load(__DIR__ . '/config');
-    }
-
-    /**
-     * Loads module specific autoloader configuration.
-     *
-     * @return array
-     */
-    public function getAutoloaderConfig()
-    {
-        return array(
-            'Zend\Loader\ClassMapAutoloader' => [
-                __DIR__ . '/src/autoload_classmap.php'
-            ],
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                    __NAMESPACE__ . 'Test' => __DIR__ . '/test/' . __NAMESPACE__ . 'Test',
-                ),
-            ),
-        );
+        return ModuleConfigLoader::load(__DIR__ . '/../config');
     }
 
     public function onBootstrap(MvcEvent $e)

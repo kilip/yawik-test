@@ -13,7 +13,7 @@ return [
                 ],
             ],
             'annotation' => [
-                'paths' => [ __DIR__ . '/../src/Organizations/Entity']
+                'paths' => [ __DIR__ . '/../src/Entity']
             ],
         ],
         'eventmanager' => [

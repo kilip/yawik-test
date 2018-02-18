@@ -46,7 +46,7 @@ class Module implements PdfInterface, ResolverInterface
      */
     public function getConfig()
     {
-        return ModuleConfigLoader::load(__DIR__ . '/config');
+        return ModuleConfigLoader::load(__DIR__ . '/../config');
     }
     
     public static function factory(ServiceManager $serviceManager)

@@ -21,7 +21,7 @@ return [
                  * for multiple paths.
                  * example https://github.com/doctrine/DoctrineORMModule
                  */
-                'paths' => [ __DIR__ . '/../src/Jobs/Entity'],
+                'paths' => [ __DIR__ . '/../src/Entity'],
             ],
         ],
         'eventmanager' => [
