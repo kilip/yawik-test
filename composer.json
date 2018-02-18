@@ -94,7 +94,6 @@
             "Applications\\": "module/Applications/src",
             "Auth\\": "module/Auth/src/Auth",
             "Acl\\": "module/Auth/src/Acl",
-            "Yawik\\Behat\\": "module/Behat/src",
             "Core\\": "module/Core/src",
             "Cv\\": "module/Cv/src",
             "Geo\\": "module/Geo/src",
@@ -117,7 +116,8 @@
             "JobsTest\\": "module/Jobs/test",
             "OrganizationsTest\\": "module/Organizations/test",
             "PdfTest\\": "module/Pdf/test",
-            "SettingsTest\\": "module/Settings/test"
+            "SettingsTest\\": "module/Settings/test",
+            "Yawik\\Behat\\": "module/Behat/src"
         }
     }
 }
