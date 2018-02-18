@@ -1,0 +1,122 @@
+{
+    "name": "kilip/yawik",
+    "type": "project",
+    "description": "Web based applicant tracking system for managing jobs and applications",
+    "authors": [
+	{
+		"name": "Mathias Gelhausen",
+		"email": "gelhausen@cross-solution.de"
+	},
+	{
+		"name": "Carsten Bleek",
+		"email": "bleek@cross-solution.de"
+	},
+	{
+		"name": "Mathias Weitz",
+		"email": "weitz@cross-solution.de"
+	}
+    ],
+    "support": {
+        "email": "contact@yawik.org",
+        "docs": "http://yawik.readthedocs.org/en/latest/",
+	    "forum": "https://groups.google.com/forum/#!forum/yawik",
+	    "issues": "https://github.com/cross-solution/YAWIK/issues"
+    },
+    "license": "MIT",
+    "keywords": [
+        "human resource", "human relation", "applicant", "ATS",
+        "zf2", "jobboard"
+    ],
+    "homepage": "http://yawik.org/",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "require": {
+        "php": ">=5.6",
+        "ext-mongo": "*",
+        "ext-intl": "*",
+        "zendframework/zend-mvc": "^3.0",
+        "zendframework/zend-mvc-console": "^1.1",
+        "zendframework/zend-mvc-i18n": "^1.0",
+        "zendframework/zend-mvc-plugins": "^1.0",
+        "zendframework/zend-navigation": "^2.8",
+        "zendframework/zend-cache": "^2.7",
+        "zendframework/zend-session": "^2.7",
+        "zendframework/zend-servicemanager-di": "^1.1",
+        "zendframework/zend-authentication": "^2.5",
+        "zendframework/zend-permissions-acl": "^2.6",
+        "zendframework/zend-form": "^2.10",
+        "zendframework/zend-mail": "^2.7",
+        "zendframework/zend-json": "^3.0",
+        "zendframework/zend-view": "^2.9",
+        "zendframework/zend-feed": "^2.8",
+        "zendframework/zendservice-recaptcha": "^3.0",
+        "zendframework/zend-log": "^2.9",
+        "zendframework/zend-serializer": "^2.8",
+        "zendframework/zend-progressbar": "^2.5",
+        "zendframework/zend-math": "^3.0",
+        "zendframework/zend-captcha": "^2.7",
+        "zendframework/zend-i18n-resources": "^2.5",
+        "doctrine/doctrine-mongo-odm-module": "*",
+        "hybridauth/hybridauth": "^2.9",
+        "mpdf/mpdf": "5.7.*",
+        "tinymce/tinymce": "4.5.*",
+        "mikemix/zf2htmlpurifier": "*",
+        "jmikola/geojson": "*",
+        "mikey179/vfsStream": "*",
+        "tracy/tracy": "^2.4",
+        "imagine/imagine": "*",
+        "doctrine/common": "2.7.*"
+    },
+    "require-dev": {
+        "cbleek/pecl-solr-hint": "dev-master",
+        "zendframework/zend-component-installer": "^0.7.0",
+        "zendframework/zend-test": "^3.1",
+        "phpunit/phpunit": "^5.7",
+        "behat/behat": "^3.2",
+        "behat/mink": "^1.7",
+        "behat/mink-browserkit-driver": "^1.3",
+        "behat/mink-selenium2-driver": "^1.3",
+        "lakion/mink-debug-extension": "^1.2.3",
+        "se/selenium-server-standalone": "^2.52",
+        "enm1989/chromedriver": "^2.35",
+        "behat/mink-extension": "^2.3"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "./install.sh"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Applications\\": "module/Applications/src",
+            "Auth\\": "module/Auth/src",
+            "Yawik\\Behat\\": "module/Behat/src",
+            "Core\\": "module/Core/src",
+            "Cv\\": "module/Cv/src",
+            "Geo\\": "module/Geo/src",
+            "Install\\": "module/Install/src",
+            "Jobs\\": "module/Jobs/src",
+            "Organizations\\": "module/Organizations/src",
+            "Pdf\\": "module/Pdf/src",
+            "Settings\\": "module/Settings/src"
+        }
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "ApplicationsTest\\": "module/Applications/test",
+            "AuthTest\\": "module/Auth/test",
+            "CoreTest\\": "module/Core/test",
+            "CoreTestUtils\\": "module/Core/test",
+            "CvTest\\": "module/Cv/test",
+            "GeoTest\\": "module/Geo/test",
+            "InstallTest\\": "module/Install/test",
+            "JobsTest\\": "module/Jobs/test",
+            "OrganizationsTest\\": "module/Organizations/test",
+            "PdfTest\\": "module/Pdf/test",
+            "SettingsTest\\": "module/Settings/test"
+        }
+    }
+}
